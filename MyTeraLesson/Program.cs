@@ -1,9 +1,7 @@
 ﻿using System;
-  class HomeWork4
-
-  {
-    static void Main(string[] args)
-    {
+class HomeWork4
+{   static void Main(string[] args)
+   {
         Console.ReadLine();
     }
     //HomeWork4-1
