@@ -1,74 +1,61 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
 
-class FirstHomeWork 
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Welcome to C# ");
-        Console.WriteLine("Mr.Pirce");
-
-        //HomeWork3-1     
-        
-        Console.WriteLine("Please enter x: ");
-        int x = Int32.Parse(Console.ReadLine());
-
-        Console.WriteLine("Please enter y: ");
-        int y = Int32.Parse(Console.ReadLine());
-
-        Console.WriteLine("Please enter z: ");
-        int z = Int32.Parse(Console.ReadLine());
-
-        int Sum = x + (y * z);
-        Console.WriteLine("Your answer is: " + Sum);
-
-        // HomeWork3-2
-
-        Console.WriteLine("Enter Your Name: ");
+class HomeWork4
+{   static void Main(string[] args)
+   {
         Console.ReadLine();
+   }
+        static int getSum(int x, int y)
+        {
+            return x + y;
+        }
+        static void GetParams()
+        {
+            Console.WriteLine("Please enter number1:");
+            decimal number1 = decimal.Parse(Console.ReadLine());
 
-        Console.WriteLine("Enter Your Surname:");
-        Console.ReadLine();
+            Console.WriteLine("Please enter number2:");
+            decimal number2 = decimal.Parse(Console.ReadLine());
 
-        Console.WriteLine("Enter Your age: ");
-        int age = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter number3:");
+            decimal number3 = decimal.Parse(Console.ReadLine());
 
-        Console.WriteLine("Enter Your weight: ");
-        decimal weight = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter number4:");
+            decimal number4 = decimal.Parse(Console.ReadLine());
+            Console.WriteLine();
 
-        Console.WriteLine("Enter Your height: ");
-        decimal height = decimal.Parse(Console.ReadLine());
-
-        //HomeWork3-3
-        
-        Console.WriteLine("Enter Your Weight: ");
-        decimal Weight = decimal.Parse(Console.ReadLine());
-
-        Console.WriteLine("Enter Your Height: ");
-        decimal Height = decimal.Parse(Console.ReadLine());
-
-        int multp = (int) ((Height * Height) / 100);
-        int BMI = (int) ((Weight / multp));
-
-        Console.WriteLine("Your BMI is:" +  BMI);
-        Console.WriteLine();
-
-
-        //HomeWork3-4
-
-
-        Console.WriteLine();
-        Console.WriteLine(" " +"|" + " "+ "|" + " ");
-        Console.WriteLine("1"+ "|" + "2" +"|" + "3");
-        Console.WriteLine("__"+"|" +"__" +"|" +"__");
-        Console.WriteLine(" " +"|" + " " +"|" + " ");
-        Console.WriteLine("4" +"|" + "5" +"|" + "6");
-        Console.WriteLine("__"+"|" +"__" +"|" +"__");
-        Console.WriteLine(" " +"|" + " " +"|" + " ");
-        Console.WriteLine("7" +"|" + "8" +"|" + "9");
-        Console.WriteLine(" " +"|" + " " +"|" + " ");
-        Console.WriteLine();
-        Console.WriteLine();
-
-    }
+            if (number1 <= number2 && number1 <= number3 && number1 <= number4)
+            {
+                Console.WriteLine("The smallest number is:" + number1);
+            }
+            else if (number2 <= number3 && number2 <= number4)
+            {
+                Console.WriteLine("The smallest number is:" + number2);
+            }
+            else if (number3 <= number4)
+            {
+                Console.WriteLine("The smallest number is:" + number3);
+            }
+            else
+            {
+                Console.WriteLine("The smallest number is:" + number4);
+            }
+            if (number1 >= number2 && number1 >= number3 && number1 >= number4)
+            {
+                Console.WriteLine("The biggest number is:" + number1);
+            }
+            else if (number2 >= number3 && number2 >= number4)
+            {
+                Console.WriteLine("The biggest number is:" + number2);
+            }
+            else if (number3 >= number4)
+            {
+                Console.WriteLine("The biggest number is:" + number3);
+            }
+            else
+            {
+                Console.WriteLine("The biggest number is:" + number4);
+            }
+        }
 }
+   
