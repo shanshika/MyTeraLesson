@@ -1,91 +1,69 @@
 ﻿using System;
-class HomeWork4
-{   static void Main(string[] args)
-   {
-        Console.ReadLine();
-    }
-    //HomeWork4-1
-    static int getSum(int x, int y)
+using System.Threading;
+  class HomeWork5
+  {
+    static void Main(string[] args)
     {
-        return x + y;
+      startGame();
     }
-    //HomeWork4-2
-    static void Numbers(double numb1, double numb2, double numb3, double numb4)
+    static void startGame()
     {
-        if (numb1 >= numb2 && numb1 >= numb3 && numb1 >= numb4)
+        Welcome();
+        tries();
+    }
+    static void Welcome()
+    {
+        Console.WriteLine("Hello, let's start...");
+        Console.WriteLine();
+        Console.WriteLine("Read the instructions please...");
+        Console.WriteLine();
+        Instruction();
+    }
+    static void Instruction()
+    {
+        Console.WriteLine("I have a hidden number for you ");
+        Console.WriteLine("This number is between 0 to 20 ");
+        Console.WriteLine("Your must guess this number ");
+        Console.WriteLine("You have 3 attempts ");
+    }
+    static int randomNumber()
+    {
+      return new Random().Next(0, 21);
+    }
+       static int enterNumb()
+       {
+        Console.WriteLine();
+        Console.Write("Enter a Number: ");
+        return Int32.Parse(Console.ReadLine());
+       }
+    static void tries()
+    {
+        int retries = 0;
+        while (retries < 3)
         {
-            Console.WriteLine("The largest number is: " + numb1);
+            retries++;
+            int randomNumb = randomNumber();
+            int enterNumber = enterNumb();
+            Console.WriteLine("Right number is: " + randomNumb);
+            if (randomNumb == enterNumber)
+            {
+                Console.WriteLine("You have WON !");
+                return;
+            }
+
         }
-        else if (numb2 >= numb1 && numb2 >= numb3 && numb2 >= numb4)
+        Console.WriteLine();
+        Console.WriteLine("Yo have Lose!");
+        Console.WriteLine("Do you want to continue game? Y or N");
+        string retrygame = Console.ReadLine();
+        if (retrygame == "Y")
         {
-            Console.WriteLine("The largest number is: " + numb2);
-        }
-        else if (numb3 >= numb1 && numb3 >= numb2 && numb3 >= numb4)
-        {
-            Console.WriteLine("The largest number is:" + numb3);
-        }
-        else if (numb4 >= numb1 && numb4 >= numb2 && numb4 >= numb3)
-        {
-            Console.WriteLine("The largest number is: " + numb4);
+            tries();
         }
         else
         {
-            Console.WriteLine("These numbers is equal");
+            return;
         }
-
-
-        if (numb1 <= numb2 && numb1 <= numb3 && numb1 <= numb4)
-        {
-            Console.WriteLine("The smallest number is: " + numb1);
-        }
-        else if (numb2 <= numb1 && numb2 <= numb3 && numb2 <= numb4)
-        {
-            Console.WriteLine("The smallest number is: " + numb2);
-        }
-        else if (numb3 <= numb1 && numb3 <= numb2 && numb3 <= numb4)
-        {
-            Console.WriteLine("The smallest number is:" + numb3);
-        }
-        else if (numb4 <= numb1 && numb4 <= numb2 && numb4 <= numb3)
-        {
-            Console.WriteLine("The smallest number is: " + numb4);
-        }
-        else
-        {
-            Console.Write("");
-        }
-    
-}
-    //HomeWork4-3
-
-    static void Fruits()
-    {
-        Console.Write("Please, enter fruit: ");
-        string FruitInput = Console.ReadLine();
-        switch (FruitInput)
-        {
-            case "Apple":
-                Console.WriteLine("This fruit is an Apple");
-                break;
-            case "Watermelon":
-                Console.WriteLine("This fruit is a Watermelon");
-                break;
-            case "Melon":
-                Console.WriteLine("This fruit is a Melon");
-                break;
-            case "Cherry":
-                Console.WriteLine("This fruit is a Cherry");
-                break;
-            case "Straweberry":
-                Console.WriteLine("This fruit is a Strawberry");
-                break;
-            default:
-                Console.WriteLine("You have entered other fruit");
-                break;
-
-        }
-
-
+        Console.WriteLine();
     }
-}
-   
+  } 
