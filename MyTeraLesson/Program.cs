@@ -47,11 +47,11 @@ class FirstHomeWork
         Console.WriteLine("Enter Your Height: ");
         decimal Height = decimal.Parse(Console.ReadLine());
 
-        int multp = (int) ((Height * Height) / 100);
-        int BMI = (int) ((Weight / multp));
+         decimal BMI = (Weight / ((Height / 100) * (Height / 100)));
 
         Console.WriteLine("Your BMI is:" +  BMI);
-        Console.WriteLine();
+
+        Console.ReadLine();
 
 
         //HomeWork3-4
