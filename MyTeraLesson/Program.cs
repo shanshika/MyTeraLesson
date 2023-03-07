@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Threading;
   class HomeWork5
   {
@@ -44,17 +45,29 @@ using System.Threading;
             retries++;
             int randomNumb = randomNumber();
             int enterNumber = enterNumb();
-            Console.WriteLine("Right number is: " + randomNumb);
-            if (randomNumb == enterNumber)
-            {
-                Console.WriteLine("You have WON !");
-                return;
-            }
+            
+            string retrygame = Console.ReadLine();
 
+            Console.WriteLine("Right number is: " + randomNumb);
+             if (randomNumb == enterNumber)
+             {
+                Console.WriteLine("You have WON !");
+                Console.WriteLine("Do you want to continue game? Y or N");
+                
+                if (retrygame == "Y")
+                {
+                    tries();
+                }
+                else
+                {
+                    return;
+                }
+                return;
+             }
         }
-        Console.WriteLine();
+        
         Console.WriteLine("Yo have Lose!");
-        Console.WriteLine("Do you want to continue game? Y or N");
+               
         string retrygame = Console.ReadLine();
         if (retrygame == "Y")
         {
@@ -64,6 +77,6 @@ using System.Threading;
         {
             return;
         }
-        Console.WriteLine();
+        Console.ReadLine();
     }
   } 
