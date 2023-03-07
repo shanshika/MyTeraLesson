@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
-
-class FirstHomeWork 
-{
+  class HomeWork5
+  {
     static void Main(string[] args)
     {
+
         Console.WriteLine("Welcome to C# ");
         Console.WriteLine("Mr.Pirce");
 
@@ -52,9 +51,8 @@ class FirstHomeWork
         Console.WriteLine("Your BMI is:" +  BMI);
 
         Console.ReadLine();
-
-
-        //HomeWork3-4
+        
+         //HomeWork3-4
 
 
         Console.WriteLine();
@@ -72,3 +70,4 @@ class FirstHomeWork
 
     }
 }
+
